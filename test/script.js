@@ -959,3 +959,31 @@ var TextMap = [
   });
   
   // mouse end
+
+
+  /*MAPS
+  1.
+  'W W W W W W W W W W W W W W W W W W W W',
+  'W       W E       W     W       W     W',
+  'W             W           W W W       W',
+  'W W W W W W W          W          W W W',
+  'W   W                   W W W W       W',
+  'W   W W W W W  W W W            W  E  W',
+  'W                   W W W W     W W W W',
+  'W   W  W W W W W W         W W        W',
+  'W   W                         W W W   W',
+  'W   W                             W   W',
+  'W   W                         E   W   W',
+  'W   W                         W   W   W',
+  'W   W                         W   W   W',
+  'W   W                         W   W   W',
+  'W   W                   W W W W   W   W',
+  'W   W                   W         W   W',
+  'W   W                   W W W W   W   W',
+  'W   W                       W E   W   W',
+  'W   W W W W W W W W     W W W W W W W W',
+  'W                   W             W E W',
+  'W   W W W W W W W W W W W W W W   E   W',
+  'W                             W       W',
+  'W W W W W W W W W W W W W W W W W W W W',
+  */
