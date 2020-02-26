@@ -7,8 +7,8 @@ var w = window,
 var x = w.innerWidth || e.clientWidth || g.clientWidth,
         y = w.innerHeight || e.clientHeight || g.clientHeight;
 
-var width = x - 16,
-    height = y - 16;
+var width = x - 0,
+    height = y - 0;
     
 
 var currentPosition; 
@@ -24,8 +24,8 @@ var body = document.querySelectorAll('body');
     var layout = [],
         fronteirTest = [];
 // Determines the size of the blocks 
-    var cellSize = 16,
-        cellSpacing = 8,
+    var cellSize = 1,
+        cellSpacing = 1,
         cellWidth = Math.floor((width - cellSpacing) / (cellSize + cellSpacing)),
         cellHeight = Math.floor((height - cellSpacing) / (cellSize + cellSpacing)),
         cells = new Array(cellWidth * cellHeight), // each cell’s edge bits
@@ -93,10 +93,13 @@ var body = document.querySelectorAll('body');
 
     function exploreFrontier() {
 
-        if ((edge = popRandom(frontier)) == null) {
+        if ((edge = popRandom(frontier)) == null) 
+        {
             layout.push({x: 0, y: maxY, d1: 0, d0: 0})
-            for (var i = layout.length - 1; i >= 0; i--) {
-              if(layout[i].x === 0 && layout[i].y === maxY) {
+            for (var i = layout.length - 1; i >= 0; i--) 
+            {
+              if(layout[i].x === 0 && layout[i].y === maxY) 
+              {
                 drawPlayer(layout[i]);
               }
             };
@@ -349,33 +352,6 @@ var body = document.querySelectorAll('body');
     }
 
     animate();
-  
-  // mouse end
 
-
-  /*MAPS
-  1.
-  'W W W W W W W W W W W W W W W W W W W W',
-  'W       W E       W     W       W     W',
-  'W             W           W W W       W',
-  'W W W W W W W          W          W W W',
-  'W   W                   W W W W       W',
-  'W   W W W W W  W W W            W  E  W',
-  'W                   W W W W     W W W W',
-  'W   W  W W W W W W         W W        W',
-  'W   W                         W W W   W',
-  'W   W                             W   W',
-  'W   W                         E   W   W',
-  'W   W                         W   W   W',
-  'W   W                         W   W   W',
-  'W   W                         W   W   W',
-  'W   W                   W W W W   W   W',
-  'W   W                   W         W   W',
-  'W   W                   W W W W   W   W',
-  'W   W                       W E   W   W',
-  'W   W W W W W W W W     W W W W W W W W',
-  'W                   W             W E W',
-  'W   W W W W W W W W W W W W W W   E   W',
-  'W                             W       W',
-  'W W W W W W W W W W W W W W W W W W W W',
-  */
+    console.log(layout)
+    console.log(frontier)
