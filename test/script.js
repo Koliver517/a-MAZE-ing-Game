@@ -7,8 +7,8 @@ var w = window,
 var x = w.innerWidth || e.clientWidth || g.clientWidth,
         y = w.innerHeight || e.clientHeight || g.clientHeight;
 
-var width = x - 0,
-    height = y - 0;
+var width = x = 1000,
+    height = y = 1000;
     
 
 var currentPosition; 
@@ -24,8 +24,8 @@ var body = document.querySelectorAll('body');
     var layout = [],
         fronteirTest = [];
 // Determines the size of the blocks 
-    var cellSize = 1,
-        cellSpacing = 1,
+    var cellSize = 10,
+        cellSpacing = 10,
         cellWidth = Math.floor((width - cellSpacing) / (cellSize + cellSpacing)),
         cellHeight = Math.floor((height - cellSpacing) / (cellSize + cellSpacing)),
         cells = new Array(cellWidth * cellHeight), // each cell’s edge bits
@@ -37,7 +37,7 @@ var body = document.querySelectorAll('body');
 
     var canvas = document.createElement('canvas');
 
-    canvas.setAttribute("id", "canvas");
+    canvas.setAttribute("id", "cvs");
     canvas.setAttribute("width", width);
     canvas.setAttribute("height", height);
 
@@ -69,7 +69,7 @@ var body = document.querySelectorAll('body');
     );
 
 //color of the maze
-    context.fillStyle = "#00ffff";
+    context.fillStyle = "blue";
 
     // Add a random cell and two initial edges.
     var start = (cellHeight - 1) * cellWidth;
@@ -121,7 +121,7 @@ var body = document.querySelectorAll('body');
             south,
             west;
 // makes the maze color
-        context.fillStyle = open ? "#00ffff": "transparent";
+        context.fillStyle = open ? "#4AF626": "transparent";
         if (d0 === N) fillSouth(i1), x1 = x0, y1 = y0 - 1, d1 = S, south = true;
         else if (d0 === S) fillSouth(i0), x1 = x0, y1 = y0 + 1, d1 = N, south = true;
         else if (d0 === W) fillEast(i1), x1 = x0 - 1, y1 = y0, d1 = E, east = true;
@@ -197,11 +197,11 @@ var body = document.querySelectorAll('body');
         var finishY = 0 * cellSize + (0 + 1) * cellSpacing
         game.beginPath();
         game.arc(finishX + (cellSize / 2), finishY + (cellSize / 2), cellSize / 2, 0, 2 * Math.PI, false);
-        game.fillStyle = "green";
+        game.fillStyle = "blue";
         game.fill();
         game.beginPath();
         game.arc(playerX + (cellSize / 2), playerY + (cellSize / 2), cellSize / 2, 0, 2 * Math.PI, false);
-        game.fillStyle = "black";
+        game.fillStyle = "pink";
         game.fill();
     }
 
@@ -355,3 +355,4 @@ var body = document.querySelectorAll('body');
 
     console.log(layout)
     console.log(frontier)
+

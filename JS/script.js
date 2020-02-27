@@ -12,3 +12,5 @@ var width = tempWidth - 16,
 
 console.log(width);
 console.log(height);
+
+
