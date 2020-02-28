@@ -25,8 +25,8 @@ function fakeCRT() {
     texture = glcanvas.texture(source);
     
     // Just setting up some details to tweak the bulgePinch effect
-    w = source.width;
-    h = source.height;
+    w = source.width ;
+    h = source.height ;
     hw = w / 2;
     hh = h / 2;
     w75 = w * 0.75;
@@ -51,7 +51,7 @@ function fakeCRT() {
         // Apply WebGL magic
         glcanvas.draw(texture)
             .bulgePinch(hw, hh, w75, 0.12)
-            .vignette(0.25, 0.74)
+            .vignette(0.25, 0.50)
             .update();
     }, Math.floor(1000 / 40));
 }

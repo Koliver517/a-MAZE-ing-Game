@@ -42,7 +42,6 @@ var body = document.querySelectorAll('body');
     canvas.setAttribute("height", height);
 
     body[0].appendChild(canvas);
-
     var context = canvas.getContext("2d");
 
 
