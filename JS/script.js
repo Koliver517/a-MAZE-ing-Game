@@ -1,6 +1,6 @@
 var canvas = $('#GameBoardCanvas');
 //The game board 1 = walls, 0 = free space, and -1 = the goal
-var board = [
+var boardOne = [
     [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
     [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1],
     [ 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1],
@@ -27,14 +27,14 @@ function draw(){
     ctx.clearRect(0, 0, width, width);
     ctx.fillStyle="white";
     //Loop through the board array drawing the walls and the goal
-    for(var y = 0; y < board.length; y++){
-        for(var x = 0; x < board[y].length; x++){
+    for(var y = 0; y < boardOne.length; y++){
+        for(var x = 0; x < boardOne[y].length; x++){
             //Draw a wall
-            if(board[y][x] === 1){
+            if(boardOne[y][x] === 1){
                 ctx.fillRect(x*blockSizex, y*blockSizey, blockSizex, blockSizey);
             }
             //Draw the goal
-            else if(board[y][x] === -1){
+            else if(boardOne[y][x] === -1){
                 ctx.beginPath();
                 ctx.lineWidth = 5;
                 ctx.strokeStyle = "gold";
@@ -47,21 +47,32 @@ function draw(){
         }
     }
     //Draw the player
-    ctx.beginPath();
     var half = blockSizex;
     var img = document.getElementById("scream");
-    ctx.drawImage(img,player.x*blockSizex+half, player.y*blockSizey+half, -37, -37);
+    ctx.drawImage(img,player.x*blockSizex+half, player.y*blockSizey+half, -blockSizex, -blockSizey);
 
 }
 
 //Check to see if the new space is inside the board and not a wall
 function canMove(x, y){
-    return (y>=0) && (y<board.length) && (x >= 0) && (x < board[y].length) && (board[y][x] != 1);
+    return (y>=0) && (y<boardOne.length) && (x >= 0) && (x < boardOne[y].length) && (boardOne[y][x] != 1);
+}
+
+function win(x, y)
+{
+    if (boardOne[y][x] == -1)
+    {
+        console.log("hi")
+    }
+    
+
 }
 
 $(document).keydown(function(e){
-    if((e.which == 38) && canMove(player.x, player.y-1))//Up arrow
+    win(player.x, player.y);
+    if((e.which == 38) && canMove(player.x, player.y-1) )//Up arrow
         player.y--;
+        
     else if((e.which == 40) && canMove(player.x, player.y+1)) // down arrow
         player.y++;
     else if((e.which == 37) && canMove(player.x-1, player.y))
