@@ -1,3 +1,24 @@
+/*
+var m = document.getElementById("min");//the variable for the minutes
+var s = document.getElementById("sec");//the variable for the seconds
+var total = 0;//makes the timer start at 0
+setInterval(setTime, 1000);//sets how fast the timer will go once it has started running
+
+function setTime() {
+++total;
+s.innerHTML = pad(total % 60);//when the number of sec. reaches 60 it will start a new minute and make the seconds reset the # of sec back to zero
+m.innerHTML = pad(parseInt(total / 60));//Makes it so that after the timer reaches 60 sec a new minute is added
+} 
+
+function pad(value) {
+var valuestring = value + "";//makes sure that 
+if (valuestring.length < 2) {
+return "0" + valuestring;
+} else {
+return valuestring;
+}
+}
+*/
 var canvas = $('#GameBoardCanvas');
 //The game board 1 = walls, 0 = free space, and -1 = the goal
 var boardOne = [
