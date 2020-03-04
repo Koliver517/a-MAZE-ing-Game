@@ -2,37 +2,10 @@
 <html>
     <head>
         <title>a-MAZE-ing adventure</title>
-        <head>
-            <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js"></script>
-            <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
-            </head>
-        
-        <style>
-            body
-            {
-                overflow: hidden;
-                width:100vw;
-                height:100vh;
-                background: url(IMGS/backround.png) no-repeat;
-                background-size:100% 100%;
-                
-            }
-            #GameBoardCanvas 
-            {
-                border: 1px solid red;
-                padding: 5px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            #gdv
-            {
-                height: 90vh;
-                width: 1140px;
-                overflow-x: hidden;
-                overflow-y: auto;
-            }
-
-        </style>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+        <link rel="icon" href="IMGS/Player.gif" type="images/x-icon" sizes="32x32">
     </head>
     <body>
         <!--area for image assets to be grabbed from-->
@@ -53,6 +26,16 @@
         <button onclick="lOne()">l1 </button>
         <button onclick="lTwo()">l2 </button>
         <button onclick="lThree()">l3 </button>
+        <!--Index-->
+        <div>
+            <img src="IMGS/Player.gif" class="index">
+            <p class="indextxt">Player</p>
+        </div>
+        <div>
+            <img src="IMGS/WaterEnemy.gif" class="indexb">
+            <p class="indextxtb">Enemies</p>
+            <img src="IMGS/Virus.gif" class="indexc">
+        </div>
         <!--Game area-->
         <div id="gdv">
             <canvas id="GameBoardCanvas" width="1100" height="1900px"></canvas>

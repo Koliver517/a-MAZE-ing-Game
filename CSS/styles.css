@@ -1,34 +1,113 @@
-.l1 {
-    background-color:rgb(0, 0, 0);
+.index {
     position:absolute;
-    top:100px;
-    left:100px;
+    right:80px;
+    top:115px;
+    width:100px;
+    height:100px;
+    border-top:2px solid rgb(9, 255, 0);
+    border-right:2px solid rgb(9, 255, 0);
+    border-left:2px solid rgb(9, 255, 0);
+}
+
+.indextxt{
+    position:absolute;
+    right:70px;
+    top:200px;
+    width:130px;
+    height:130px;
+    font-size:25px;
     color:rgb(9, 255, 0);
-    width:200px;
-    font-size:100px;
+    font-family: 'Press Start 2P' ;
+}
+
+.indexb {
+    position:absolute;
+    right:80px;
+    top:280px;
+    width:100px;
+    height:100px;
+    border-bottom:2px solid rgb(9, 255, 0);
+    border-right:2px solid rgb(9, 255, 0);
+    border-left:2px solid rgb(9, 255, 0);
+}
+
+.indextxtb {
+    position:absolute;
+    right:63px;
+    top:240px;
+    width:130px;
+    height:130px;
+    font-size:20px;
+    color:rgb(9, 255, 0);
+    font-family: 'Press Start 2P' ;
+}
+
+.indexc {
+    position:absolute;
+    right:80px;
+    top:382px;
+    width:100px;
+    height:100px;
+    border-bottom:2px solid rgb(9, 255, 0);
+    border-right:2px solid rgb(9, 255, 0);
+    border-left:2px solid rgb(9, 255, 0);
+}
+
+.l1 {
+    position:fixed;
+    top:30px;
+    right:220px;
+    color:rgb(9, 255, 0);
+    width:100px;
+    font-size:50px;
     font-family: 'Press Start 2P' ;
     padding:10px;
 }
 .l2 {
-    background-color:black;
-    position:absolute;
-    top:100px;
-    left:390px;
+    position:fixed;
+    top:30px;
+    right:80px;
     color:rgb(9, 255, 0);
-    width:190px;
-    font-size:100px;
+    width:100px;
+    font-size:50px;
     font-family: 'Press Start 2P' ;
     padding:10px;
 }
 
 .semi{
-    background-color:black;
-    position:absolute;
-    top:100px;
-    left:300px;
+    position:fixed;
+    top:30px;
+    right:120px;
     color:rgb(9, 255, 0);
     width:100px;
-    font-size:100px;
+    font-size:50px;
     font-family: 'Press Start 2P' ;
     padding:10px;
+}
+
+body{
+    overflow: hidden;
+    width:100vw;
+    height:100vh;
+    background-image:url(../IMGS/backround.png);
+    background-size:100% 100%;
+    
+}
+
+#GameBoardCanvas {
+    border: 1px solid red;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#gdv{
+    height: 90vh;
+    width: 1140px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-left: 10px;
+    margin-right: auto;
+    margin-top: 100px;
 }
