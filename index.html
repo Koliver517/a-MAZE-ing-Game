@@ -10,18 +10,12 @@
         <style>
             body
             {
-                overflow:hidden;
+                overflow: hidden;
                 width:100vw;
                 height:100vh;
                 background: url(IMGS/backround.png) no-repeat;
                 background-size:100% 100%;
                 
-            }
-            #mazeArea
-            {
-                width: 100%;
-                height: 100%;
-                transform: translate(-50%, -50%);
             }
             #GameBoardCanvas 
             {
@@ -30,24 +24,40 @@
                 margin-left: auto;
                 margin-right: auto;
             }
+            #gdv
+            {
+                height: 90vh;
+                width: 1140px;
+                overflow-x: hidden;
+                overflow-y: auto;
+            }
 
         </style>
     </head>
     <body>
-        <p>Image to use:</p>
-        <img id="scream" width="o" height="o" src="IMGS/defender.gif" alt="The Scream">
+        <!--area for image assets to be grabbed from-->
+        <img id="player" style="visibility: hidden; position: absolute;" src="IMGS/player.gif">
+        <img id="enemyThree" style="visibility: hidden; position: absolute;" src="IMGS/Defendermimic.gif">
+        <img id="point" style="visibility: hidden; position: absolute;" src="IMGS/Defender.gif">
+        <img id="enemyFive" style="visibility: hidden; position: absolute;" src="IMGS/WaterEnemy.gif">
+        <img id="enemyOne" style="visibility: hidden; position: absolute;" src="IMGS/WifiEnemy.gif">
+        <img id="enemyTwo" style="visibility: hidden; position: absolute;" src="IMGS/Virus.gif">
+        <img id="emenyFour" style="visibility: hidden; position: absolute;" src="IMGS/Outlet.gif">
+        <img id="win" style="visibility: hidden; position: absolute;" src="IMGS/Poweroff.gif">
+
+
         
-        <canvas id="GameBoardCanvas" width="400px" height="400px"></canvas>
-
+        <!--timer-->
         <label id="min" class="l1">00</label><label class="semi">:</label><label id="sec" class="l2">00</label>
+        <!--buttons-->
+        <button onclick="lOne()">l1 </button>
+        <button onclick="lTwo()">l2 </button>
+        <button onclick="lThree()">l3 </button>
+        <!--Game area-->
+        <div id="gdv">
+            <canvas id="GameBoardCanvas" width="1100" height="1900px"></canvas>
+        </div>
+        <Script src="js/script.js"></Script>
 
-
-
-
-
-    <div id = "mazeArea">
-        <p>habscubsjbhubuchb fg wge ewjbwe nf  er gev  es f b re er re r er ge ger gs g es fv erw bve fb ew bre wbre bwe r b rbtrw brt</p>
-    </div>
-    <Script src="js/script.js"></Script>
     </body>
 </html>
