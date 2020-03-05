@@ -1,9 +1,45 @@
+.button1{
+    background-color:rgb(9, 255, 0);
+    position:absolute;
+    top:50px;
+    left:90px;
+    font-size:20px;
+    font-family: 'Press Start 2P' ;
+    border:none;
+}
+.button2{
+    background-color:#09ff00;
+    position:absolute;
+    top:50px;
+    left:250px;
+    font-size:20px;
+    font-family: 'Press Start 2P' ;
+    border:none;
+}
+.button3{
+    background-color:rgb(9, 255, 0);
+    position:absolute;
+    top:50px;
+    left:410px;
+    font-size:20px;
+    font-family: 'Press Start 2P' ;
+    border:none;
+}
+.score{
+    background-color:rgb(9, 255, 0);
+    position:absolute;
+    top:0px;
+    left:580px;
+    font-size:40px;
+    font-family: 'Press Start 2P' ;
+    border:2px solid #09ff00;
+}
 .index {
     position:absolute;
-    right:80px;
-    top:115px;
-    width:100px;
-    height:100px;
+    right:202px;
+    top:90px;
+    width:120px;
+    height:120px;
     border-top:2px solid rgb(9, 255, 0);
     border-right:2px solid rgb(9, 255, 0);
     border-left:2px solid rgb(9, 255, 0);
@@ -11,7 +47,29 @@
 
 .indextxt{
     position:absolute;
-    right:70px;
+    right:190px;
+    top:175px;
+    width:130px;
+    height:130px;
+    font-size:19.5px;
+    color:rgb(9, 255, 0);
+    font-family: 'Press Start 2P' ;
+}
+
+.indexb {
+    position:absolute;
+    right:80px;
+    top:250px;
+    width:120px;
+    height:120px;
+    border-bottom:2px solid rgb(9, 255, 0);
+    border-right:2px solid rgb(9, 255, 0);
+    border-left:2px solid rgb(9, 255, 0);
+}
+
+.indextxtb {
+    position:absolute;
+    right:150px;
     top:200px;
     width:130px;
     height:130px;
@@ -20,43 +78,97 @@
     font-family: 'Press Start 2P' ;
 }
 
-.indexb {
+.indexc {
     position:absolute;
     right:80px;
-    top:280px;
-    width:100px;
-    height:100px;
+    top:362px;
+    width:120px;
+    height:120px;
     border-bottom:2px solid rgb(9, 255, 0);
     border-right:2px solid rgb(9, 255, 0);
     border-left:2px solid rgb(9, 255, 0);
 }
 
-.indextxtb {
+.indexd {
     position:absolute;
-    right:63px;
-    top:240px;
+    right:202px;
+    top:358px;
+    width:120px;
+    height:120px;
+    border-bottom:2px solid rgb(9, 255, 0);
+    border-right:2px solid rgb(9, 255, 0);
+    border-left:2px solid rgb(9, 255, 0);
+}
+
+.indexe {
+    position:absolute;
+    right:80px;
+    top:470px;
+    width:120px;
+    height:120px;
+    border-right:2px solid rgb(9, 255, 0);
+    border-left:2px solid rgb(9, 255, 0);
+}
+
+.indextxte {
+    position:absolute;
+    right:68px;
+    top:560px;
     width:130px;
     height:130px;
-    font-size:20px;
+    font-size:19.5px;
     color:rgb(9, 255, 0);
     font-family: 'Press Start 2P' ;
 }
 
-.indexc {
+.indexf {
     position:absolute;
-    right:80px;
-    top:382px;
-    width:100px;
-    height:100px;
+    right:202px;
+    top:250px;
+    width:120px;
+    height:120px;
     border-bottom:2px solid rgb(9, 255, 0);
     border-right:2px solid rgb(9, 255, 0);
     border-left:2px solid rgb(9, 255, 0);
+}
+
+.indexh {
+    position:absolute;
+    right:202px;
+    top:480px;
+    width:120px;
+    height:120px;
+    border-bottom:2px solid rgb(9, 255, 0);
+    border-right:2px solid rgb(9, 255, 0);
+    border-left:2px solid rgb(9, 255, 0);
+}
+
+.indexi {
+    position:absolute;
+    right:80px;
+    top:90px;
+    width:120px;
+    height:120px;
+    border-top:2px solid rgb(9, 255, 0);
+    border-right:2px solid rgb(9, 255, 0);
+    border-left:2px solid rgb(9, 255, 0);
+}
+
+.indextxti {
+    position:absolute;
+    right:69px;
+    top:175px;
+    width:130px;
+    height:130px;
+    font-size:19.5px;
+    color:rgb(9, 255, 0);
+    font-family: 'Press Start 2P' ;
 }
 
 .l1 {
     position:fixed;
     top:30px;
-    right:220px;
+    right:215px;
     color:rgb(9, 255, 0);
     width:100px;
     font-size:50px;
@@ -66,7 +178,7 @@
 .l2 {
     position:fixed;
     top:30px;
-    right:80px;
+    right:65px;
     color:rgb(9, 255, 0);
     width:100px;
     font-size:50px;
@@ -77,7 +189,7 @@
 .semi{
     position:fixed;
     top:30px;
-    right:120px;
+    right:113px;
     color:rgb(9, 255, 0);
     width:100px;
     font-size:50px;
