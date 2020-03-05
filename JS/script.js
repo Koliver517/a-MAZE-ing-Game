@@ -32,7 +32,7 @@ var loadThree = false;
         [ 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1],
         [ 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1],
         [ 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1],
-        [ 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1],
+        [ 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1],
         [ 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1],
         [ 1, 0, 1, 5, 0, 0, 1, 0, 1, 0, 1],
         [ 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1],
@@ -87,7 +87,7 @@ var loadThree = false;
         [ 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1],
         [ 1, 0, 1, 0, 0, 1, 0, 0, 1, 2, 1],
         [ 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1],
-        [ 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1],
+        [ 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1],
         [ 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1],
         [ 1, 0, 1, 1, 1, 1, 4, 5, 1, 0, 1],
         [ 1, 2, 0, 0, 0, 2, 0, 0, 1, -1, 1],
@@ -99,11 +99,11 @@ var loadThree = false;
     };
     var enemlione=
     {
-        x: 1, y:1
+        x: 1, y:6
     };
     var enemliTwo=
     {
-        x: 9, y:1
+        x: 9, y:2
     };
     board = boardOne
 //Draw the game board
@@ -191,23 +191,40 @@ function win(x, y)
     if (board[y][x] == -1)
     {
         console.log("WOO! i win!!")
+        alert("you have passed the level")
     }
 }
+var score = 0;
+function point(x, y)
+{
+    if (board[y][x] == 2)
+    {
+        console.log("WOO! points")
+        score += 10
+        document.getElementById("score").innerHTML = (score)
+    }
+}
+var lives = 3
 function obstacleS(x, y)
 {
     if (board[y][x] == 4 || board[y][x] == 3 ||board[y][x] == 5 || (player.x == enemlione.x && player.y == enemlione.y)  || (player.x == enemliTwo.x && player.y == enemliTwo.y))
     {
         console.log("ouch")
-        document.getElementById("GameBoardCanvas").width = ("1100")
-        document.getElementById("GameBoardCanvas").height = ("1900")
-        draw(board = boardOne, player = {x: 0,y: 0});
-
+        draw(board, player = {x: 0,y: 0});
+        score -= 20
+        document.getElementById("score").innerHTML = (score)
+        lives -= 1
+        if(lives == 0)
+        {
+            alert("you are out of lives")
+        }
     }  
 }
 
 
 $(document).keydown(function(e){
     win(player.x, player.y);
+    point(player.x, player.y);
     obstacleS(player.x, player.y);
     if((e.which == 38) && canMove(player.x, player.y-1))
     {
@@ -236,11 +253,11 @@ $(document).keydown(function(e){
         enemlione.y++;
     }
     //enemy two
-    if((e.which == 38) && canMove(enemliTwo.x-1, enemliTwo.y))
+    if((e.which == 40) && canMove(enemliTwo.x-1, enemliTwo.y))
     {
         enemliTwo.x--;
     }
-    else if((e.which == 40) && canMove(enemliTwo.x+1, enemliTwo.y))
+    else if((e.which == 38) && canMove(enemliTwo.x+1, enemliTwo.y))
     {
         enemliTwo.x++;
     }
@@ -252,6 +269,7 @@ $(document).keydown(function(e){
 $(document).keyup(function(e){
     obstacleS(player.x, player.y);
     win(player.x, player.y);
+    point(player.x, player.y);
 });
 
 draw();
@@ -264,17 +282,18 @@ function lOne ()
 {
     document.getElementById("GameBoardCanvas").width = ("1100")
     document.getElementById("GameBoardCanvas").height = ("1900")
-    draw(board = boardOne, player = {x: 0,y: 0});
+
+    draw(board = boardOne, player = {x: 0,y: 0},enemlione={x: 1, y:6},enemliTwo={x: 9, y:2});
 }
 function lTwo ()
 {    
     document.getElementById("GameBoardCanvas").width = ("1100")
-    document.getElementById("GameBoardCanvas").height = ("1000")
-    draw(board = boardTwo, player = {x: 0,y: 0});
+    document.getElementById("GameBoardCanvas").height = ("1900")
+    draw(board = boardTwo, player = {x: 0,y: 0},enemlione={x: 6, y:12},enemliTwo={x: 9, y:7});
 }
 function lThree ()
 { 
     document.getElementById("GameBoardCanvas").width = ("1100")
-    document.getElementById("GameBoardCanvas").height = ("1000")
-    draw(board = boardThree, player = {x: 0,y: 0});
+    document.getElementById("GameBoardCanvas").height = ("1900")
+    draw(board = boardThree, player = {x: 0,y: 0},enemlione={x: 9, y:6},enemliTwo={x: 5, y:7});
 }
